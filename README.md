@@ -75,3 +75,68 @@ Running Tests
 ```
 npm test
 ```
+
+## API Endpoints
+### Authentication
+You need to be authenticated to perform any of the task operations.
+
+### Task Endpoints
+- Create a Task
+```
+POST /api/task/
+```
+Request Body:
+json
+```
+{
+  "title": "Task title",
+  "description": "Task description",
+  "dueDate": "2024-09-15",
+  "category": "work"
+}
+```
+
+- Update a Task
+```
+PATCH /api/task/:id
+```
+Request Body (at least one field must be provided):
+json
+```
+{
+  "title": "Updated title",
+  "description": "Updated description",
+  "dueDate": "2024-10-01",
+  "category": "shopping"
+}
+```
+
+- Delete a Task
+```
+DELETE /api/task/:id
+```
+
+Toggle Task Completion
+```
+PATCH /api/task/toggle/:id
+```
+
+Get All Tasks
+```
+GET /api/task/
+```
+Sample Task Object
+A sample task object returned from the API looks like this:
+
+json
+```
+{
+  "_id": "64e9465c76e7a937546ac59a",
+  "title": "Task 1",
+  "description": "This is a sample task.",
+  "dueDate": "2024-09-15T00:00:00.000Z",
+  "category": "work",
+  "completed": false,
+  "user": "64e9465c76e7a937546ac598"
+}
+```
