@@ -1,5 +1,9 @@
 import { createTask, updateTask, deleteTask, toggleTask, allTask } from "../controllers/task.controller.js";
-import Task from "../models/task.model.js"; est.mock('../models/task.model.js'); uest = {
+import Task from "../models/task.model.js";
+
+jest.mock('../models/task.model.js');
+
+const mockRequest = {
     body: {
         title: "Test Task",
         description: "This is a test description",
@@ -7,7 +11,7 @@ import Task from "../models/task.model.js"; est.mock('../models/task.model.js');
         category: "work"
     },
     user: {
-        _id: "user123" 
+        _id: "user123" // Mocking the logged-in user's ID
     }
 };
 
