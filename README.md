@@ -78,9 +78,44 @@ npm test
 
 ## API Endpoints
 ### Authentication
-You need to be authenticated to perform any of the task operations.
+
+- Register User
+```
+POST /api/user/signup
+```
+
+Request Body:
+json
+```
+{
+  "fullname": "your-fullname",
+  "username": "your-username",
+  "password": "123456"
+}
+```
+
+- Login User
+```
+POST /api/user/login
+```
+
+Request Body:
+json
+```
+{
+  "username": "your-username",
+  "password": "123456"
+}
+```
+
+- LogOut User
+```
+POST /api/user/logout
+```
 
 ### Task Endpoints
+You need to be authenticated to perform any of the task operations.
+
 - Create a Task
 ```
 POST /api/task/
