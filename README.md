@@ -51,12 +51,14 @@ Ensure MongoDB is running either locally or through a service like MongoDB Atlas
 Create a .env file in the root of your project and set the following variables:
 
 ```
+PORT=<Any port>
 MONGO_URI=<Your MongoDB connection string>
 JWT_SECRET=<Your JWT secret key>
 ```
->[!NOTE]
->MONGO_URI: The connection string for your MongoDB instance.
->JWT_SECRET: A secret key for signing JWT tokens.
+> [!NOTE]
+> PORT: Port where you can listen to your app.
+> MONGO_URI: The connection string for your MongoDB instance.
+> JWT_SECRET: A secret key for signing JWT tokens.
 
 ## Running the Application
 
